@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 1.5em !important;
 }
 
 .App-logo {
@@ -35,4 +36,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+#gridDeleteSelected {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  margin: 1px;
+  top: 0;
+}
+
+#gridDeleteSelected .dx-button-text {
+  line-height: 0;
+}
+
+#gridContainer {
+  border: 1px solid color(srgb 0.3541 0.3542 0.3542);
+  padding: 10px;
+  border-radius: 8px;
 }
