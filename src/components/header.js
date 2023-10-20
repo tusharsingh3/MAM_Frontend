@@ -1,14 +1,18 @@
 import React from 'react';
 import Menu, { Item } from 'devextreme-react/menu';
+import { menuOptions } from '../common';
 
-function Header() {
+function Header(props) {
+    const { isLoggedIn = true } = props;
     return (
         <div>
             <div id="container">
                 <Menu>
-                    <Item icon='home' url='/' />
-                    <Item icon='login' url='/login' />
-                    <Item text="Contact" url='/contact' />
+                    {menuOptions.map(menu => {
+                        return (
+                            <Item icon={menu.icon} url={menu.url} key={menu.id} />
+                        )
+                    })}
                 </Menu>
             </div>
         </div>

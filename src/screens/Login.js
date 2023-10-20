@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Box, { Item, } from 'devextreme-react/box';
 import FormComponent from '../components/form';
 import { getResponse } from '../common';
@@ -12,15 +12,16 @@ const loginFormConfig = [
 
 const Login = () => {
     const [formData, setFormData] = useState(null);
+    const formInstance = useRef(null);
     const navigate = useNavigate();
 
     const submitButtonOptions = {
         text: "Login",
         useSubmitBehavior: true,
-        onClick: function () {
+        onClick: async function () {
             if (Object.entries(formData).length === loginFormConfig.length) {
                 const url = 'https://api.publicapis.org/entries';
-                const response = getResponse(url, formData);
+                const response = await getResponse(url, formData);
                 if (response.status === enums.statusCodes.success) {
                     navigate('/contact');
                 } else {
@@ -45,7 +46,7 @@ const Login = () => {
         <div>
             <Box direction="col" width="100%" className='login-box'>
                 <Item ratio={1}>
-                    <FormComponent formConfig={loginFormConfig} handleChange={handleChange} submitButtonOptions={submitButtonOptions} caption='Login Form' />
+                    <FormComponent formInstance={formInstance} formConfig={loginFormConfig} handleChange={handleChange} submitButtonOptions={submitButtonOptions} caption='Login Form' />
                 </Item>
             </Box>
         </div>
