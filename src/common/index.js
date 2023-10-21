@@ -38,9 +38,11 @@ export const deleteRecord = async (url) => {
 };
 
 export const menuOptions = [
-    { id: 1, text: 'Home', icon: 'product', url: '/' },
-    { id: 2, text: 'Login', icon: 'login', url: '/login' },
-    { id: 2, text: 'Register', icon: 'login', url: '/register' },
-    { id: 3, text: 'Channels', icon: 'group', url: '/channels' },
-    { id: 3, text: 'Roles', icon: 'role', url: '/roles' }
+    { ID: 0, name: 'Home', icon: 'product', url: '/' },
+    { ID: 1, name: 'Contact Us', icon: 'contact', url: '/contact' },
+    { ID: 2, name: 'Login', icon: 'login', url: '/login', showAfterLogin: false },
+    { ID: 3, name: 'Register', icon: 'login', url: '/register', showAfterLogin: false },
+    { ID: 4, name: 'Channels', icon: 'group', url: '/channels' },
+    { ID: 5, name: 'Roles', icon: 'role', url: '/roles' },
+    { ID: 6, name: 'Log Out', icon: 'logout', url: '/logout', isForLogout: true },
 ];
