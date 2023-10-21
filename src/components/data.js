@@ -99,3 +99,8 @@ export const channels = [
     { ChannelId: 98, ChannelName: "Wake", CreatedOn: "12/27/2022", CreatedBy: "Wake Oloshkin" },
     { ChannelId: 99, ChannelName: "Evelin", CreatedOn: "01/24/2023", CreatedBy: "Evelin Leipelt" },
     { ChannelId: 100, ChannelName: "Solomon", CreatedOn: "01/25/2023", CreatedBy: "Solomon Bunworth" }]
+
+export const roles = [
+    { RoleId: 1, RoleName: 'Super Admin', CreatedOn: "01/24/2023", CreatedBy: "Solomon Bunworth" },
+    { RoleId: 1, RoleName: 'Admin', CreatedOn: "01/25/2023", CreatedBy: "Solomon Bunworth" },
+]

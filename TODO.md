@@ -1,5 +1,6 @@
 # Menu
 ## Need to make UI better.
+## Need to show menu based on login status.
 
 # Grid
 ## Export To PDF - Need to discuss will be from frontend or backend.
@@ -9,3 +10,7 @@
 
 # Form
 ## Disable the main button un-till all the warning of the form are resolved.
+
+# Login/Register
+## Need to improve UI.
+## Need to implement password and confirm password same functionality correctly.
