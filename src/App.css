@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 1.5em !important;
 }
 
 .App-logo {
@@ -35,4 +36,67 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+#gridDeleteSelected {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  margin: 1px;
+  top: 0;
+}
+
+#gridDeleteSelected .dx-button-text {
+  line-height: 0;
+}
+
+#gridContainer {
+  border: 1px solid color(srgb 0.3541 0.3542 0.3542);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.tabpanel-item {
+  height: 200px;
+  user-select: none;
+  padding-left: 25px;
+  padding-top: 55px;
+}
+
+.mobile .tabpanel-item {
+  padding-top: 10px;
+}
+
+.tabpanel-item > div {
+  float: left;
+  padding: 0 85px 10px 10px;
+}
+
+.tabpanel-item p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.item-box {
+  font-size: 16px;
+  margin: 15px 0 45px 10px;
+}
+
+.options {
+  padding: 20px;
+  background-color: rgba(191, 191, 191, 0.15);
+  margin-top: 20px;
+}
+
+.caption {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.option {
+  margin-top: 10px;
 }
