@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  margin: 1.5em !important;
 }
 
 .App-logo {
@@ -99,4 +98,28 @@
 
 .option {
   margin-top: 10px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.header-bg-red,
+.header-bg-red .dx-tabpanel-tabs .dx-tabs .dx-tabs-wrapper .dx-item,
+.header-bg-red .dx-tabpanel-tabs .dx-tabs {
+  background-color: #e9edee !important;
+}
+
+.border-none,
+.border-none .dx-buttongroup .dx-buttongroup-wrapper .dx-widget {
+  border: none !important;
+}
+
+.header-bg-red .dx-tabpanel-tabs .dx-tabs .dx-tabs-wrapper .dx-item {
+  box-shadow: none;
+}
+
+.grid-box {
+  padding: 1% 2% 0% 2% !important;
 }

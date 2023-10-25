@@ -23,7 +23,6 @@ const Register = () => {
         useSubmitBehavior: true,
         // disabled: true,
         onClick: async function () {
-            debugger
             if (Object.entries(formData || {}).length === registerFormConfig.length) {
                 const url = 'https://api.publicapis.org/entries';
                 const response = await getResponse(url, formData);
@@ -35,10 +34,6 @@ const Register = () => {
             }
         }
     };
-
-    // if (formInstance?.current?.isValid?.()) {
-    //     submitButtonOptions.disabled = false;
-    // }
 
     function handleChange(params) {
         const { dataField, value, component } = params;
