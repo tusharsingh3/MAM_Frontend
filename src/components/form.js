@@ -1,6 +1,5 @@
-import React, { useRef } from 'react';
-import { Form, GroupItem, ButtonItem, NumericRule, EmailRule, SimpleItem, CompareRule, PatternRule } from 'devextreme-react/form';
-import Validator from 'devextreme/ui/validator';
+import React from 'react';
+import { Form, GroupItem, ButtonItem, NumericRule, EmailRule, SimpleItem, PatternRule } from 'devextreme-react/form';
 
 const FormComponent = (props) => {
     const { formConfig, submitButtonOptions, caption, handleChange, formInstance } = props;
@@ -40,10 +39,6 @@ const FormComponent = (props) => {
         ],
     };
 
-    const passwordComparison = () => {
-        return formConfig.Password;
-    };
-
     return (
         <Form formData={formConfig} onFieldDataChanged={handleChange} onInitialized={(e) => (formInstance.current = e.component)}>
             <GroupItem caption={caption}>
@@ -51,12 +46,6 @@ const FormComponent = (props) => {
                     const { name, lebel, type, isRequired = false, isNumberField = false, isEmailField = false, isForConfirmPassword = false, isForPassword = false } = ele;
                     const isEmailRule = isEmailField ? <EmailRule /> : null;
                     let renderRule = isNumberField ? <NumericRule /> : isEmailRule;
-                    // if (isForConfirmPassword) {
-                    //     renderRule = <CompareRule
-                    //         message="Password and Confirm Password do not match"
-                    //         comparisonTarget={passwordComparison}
-                    //     />
-                    // }
                     if (isForPassword) {
                         renderRule = <PatternRule
                             message="Password must contains and uppercase, a lowercase, one digit and minimun of 8 characters."

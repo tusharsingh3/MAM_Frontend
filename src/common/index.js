@@ -43,6 +43,5 @@ export const menuOptions = [
     { ID: 2, name: 'Login', icon: 'login', url: '/login', showAfterLogin: false },
     { ID: 3, name: 'Register', icon: 'login', url: '/register', showAfterLogin: false },
     { ID: 4, name: 'Channels', icon: 'group', url: '/channels' },
-    { ID: 5, name: 'Roles', icon: 'role', url: '/roles' },
-    { ID: 6, name: 'Log Out', icon: 'logout', url: '/logout', isForLogout: true },
+    { ID: 5, name: 'Roles', icon: 'role', url: '/roles' }
 ];
