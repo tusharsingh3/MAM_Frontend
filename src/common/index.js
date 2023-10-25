@@ -45,3 +45,9 @@ export const menuOptions = [
     { ID: 4, name: 'Channels', icon: 'group', url: '/channels' },
     { ID: 5, name: 'Roles', icon: 'role', url: '/roles' }
 ];
+
+export const profileMenu = [
+    { id: 1, text: 'Profile', icon: 'user' },
+    { id: 4, text: 'Messages', icon: 'email' },
+    { id: 3, text: 'Logout', icon: 'runner' }
+];

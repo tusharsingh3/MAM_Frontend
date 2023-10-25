@@ -1,26 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { menuOptions } from '../common';
+import { menuOptions, profileMenu } from '../common';
 import TabPanel from 'devextreme-react/tab-panel';
 import ResponsiveBox, { Row, Col, Item, Location } from 'devextreme-react/responsive-box';
 import DropDownButton from 'devextreme-react/drop-down-button';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/logo192.png';
 
-const profileMenu = [
-    { id: 1, text: 'Profile', icon: 'user' },
-    { id: 4, text: 'Messages', icon: 'email' },
-    { id: 3, text: 'Logout', icon: 'runner' }
-];
-
-function Header(props) {
+function Header() {
     const navigate = useNavigate();
     const [selectedIndex, setSelectedIndex] = useState(0);
 
-    const menu = [...menuOptions];
-
     const onSelectionChanged = (args) => {
         if (args.name === 'selectedIndex') {
-            const urlToRedirect = menu.find(ele => ele.ID === args.value)?.url;
+            const urlToRedirect = menuOptions.find(ele => ele.ID === args.value)?.url;
             if (urlToRedirect === 'logout') {
                 //logout current user here.
             } else {
@@ -38,7 +30,7 @@ function Header(props) {
         const pathName = window.location.pathname;
         let activeTabIndex = 0;
         if (pathName) {
-            activeTabIndex = menu.find(ele => ele.url === pathName)?.ID;
+            activeTabIndex = menuOptions.find(ele => ele.url === pathName)?.ID;
             setSelectedIndex(activeTabIndex);
         }
     }, []);
@@ -75,7 +67,7 @@ function Header(props) {
                     <div>
                         <TabPanel
                             className='header-bg-red'
-                            dataSource={menu}
+                            dataSource={menuOptions}
                             selectedIndex={selectedIndex}
                             onOptionChanged={onSelectionChanged}
                             loop={false}
@@ -122,7 +114,7 @@ function Header(props) {
                     <div>
                         <DropDownButton
                             className='border-none'
-                            text="Tushar Singh"
+                            text="User name"
                             icon="user"
                             items={profileMenu}
                             onItemClick={onItemClick}
