@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Home from './Home';
-import Contactus from './Contact';
-import Login from './screens/Login';
-import Channels from './screens/Channels';
+import Home from './screens/Home';
+import ContactUs from './screens/Contact';
+import loginModel from './screens/Login';
+import channelModel from './screens/Channels';
 import Header from './components/header';
-import './App.css'
 import Register from './screens/Register';
-import Roles from './screens/Roles';
+import rolesModel from './screens/Roles';
+import './App.css';
 
 function App() {
   return (
@@ -16,11 +16,11 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/contact" element={<Contactus />} />
+          <Route path="/login" element={<loginModel.Form />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/channels" element={<Channels />} />
-          <Route path="/roles" element={<Roles />} />
+          <Route path="/channels" element={<channelModel.Grid />} />
+          <Route path="/roles" element={<rolesModel.Grid />} />
         </Routes>
       </div>
     </div>

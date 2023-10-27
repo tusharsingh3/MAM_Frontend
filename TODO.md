@@ -9,7 +9,7 @@
 ## Show Clear filters button only when at least 1 filter is applied
 
 # Form
-## Disable the main button un-till all the warning of the form are resolved.
+## Disable the submit button un-till all the warning of the form are resolved.
 
 # Login/Register
 ## Need to improve UI.
