@@ -1,6 +1,6 @@
-import Model from '../common/model';
+import GridModel from '../common/gridModel';
 
-const channelModel = new Model({
+const channelModel = new GridModel({
     title: 'Channels',
     allowEdit: true,
     columns: [

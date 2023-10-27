@@ -123,3 +123,16 @@ body {
 .grid-box {
   padding: 1% 2% 0% 2% !important;
 }
+
+.form .dx-box {
+  align-items: center !important;
+}
+
+.form .dx-form-group-with-caption > .dx-form-group-content {
+  border: 1px solid #ddd !important;
+  margin: 1% 25% 1% 25% !important;
+}
+
+.form {
+  padding-top: 2%;
+}

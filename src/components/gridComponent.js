@@ -13,10 +13,10 @@ import { updateRecord, deleteRecord } from '../common';
 const showClearButtonProp = { showClearButton: true };
 const allowedPageSizes = [5, 10, 15, 20, 'all'];
 
-function GrideComponent({ model }) {
+function GrideComponent({ gridModel }) {
     const dataGridRef = useRef(null);
     const [selectedItemKeys, setSelectedItemKeys] = useState([]);
-    const { title, columns, keyId, keyExpr = 'ID', allowEdit = false, allowSelection = false } = model;
+    const { title, columns, keyId, keyExpr = 'ID', allowEdit = false, allowSelection = false } = gridModel;
 
     const dataSource = new DataSource({
         store: new ArrayStore({

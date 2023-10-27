@@ -1,6 +1,6 @@
-import Model from '../common/model';
+import GridModel from '../common/gridModel';
 
-const rolesModel = new Model({
+const rolesModel = new GridModel({
     title: 'Roles',
     allowEdit: true,
     columns: [

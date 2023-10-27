@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Box, { Item, } from 'devextreme-react/box';
-import FormComponent from '../components/form';
+import FormComponent from '../components/formComponent';
 import { getResponse } from '../common';
 import { useNavigate } from 'react-router-dom';
 import { enums } from '../common/enums';
