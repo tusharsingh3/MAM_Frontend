@@ -7,8 +7,7 @@ import channelModel from './screens/Channels';
 import Header from './components/header';
 import Register from './screens/Register';
 import rolesModel from './screens/Roles';
-import './App.css'
-
+import './App.css';
 
 function App() {
   return (
