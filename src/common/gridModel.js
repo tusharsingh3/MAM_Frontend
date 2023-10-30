@@ -4,12 +4,7 @@ const nonAlphaNumeric = /[^a-zA-Z0-9]/g;
 
 class GridModel {
     constructor(modelConfig) {
-        const { title } = modelConfig;
-        let { api, idProperty = api + 'Id' } = modelConfig;
-        if (!api) {
-            api = `${title.replaceAll(nonAlphaNumeric, '-').toLowerCase()}`;
-            idProperty = title.replaceAll(' ', '') + 'Id';
-        }
+        const { title, api = title.replace(nonAlphaNumeric, '-').toLowerCase(), idProperty = title.replace(' ', '') + 'Id' } = modelConfig;
         Object.assign(this, { idProperty, ...modelConfig, api });
     }
 

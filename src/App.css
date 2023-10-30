@@ -105,9 +105,9 @@ body {
   height: 100%;
 }
 
-.header-bg-red,
-.header-bg-red .dx-tabpanel-tabs .dx-tabs .dx-tabs-wrapper .dx-item,
-.header-bg-red .dx-tabpanel-tabs .dx-tabs {
+.header-bg,
+.header-bg .dx-tabpanel-tabs .dx-tabs .dx-tabs-wrapper .dx-item,
+.header-bg .dx-tabpanel-tabs .dx-tabs {
   background-color: #e9edee !important;
 }
 
@@ -116,7 +116,7 @@ body {
   border: none !important;
 }
 
-.header-bg-red .dx-tabpanel-tabs .dx-tabs .dx-tabs-wrapper .dx-item {
+.header-bg .dx-tabpanel-tabs .dx-tabs .dx-tabs-wrapper .dx-item {
   box-shadow: none;
 }
 

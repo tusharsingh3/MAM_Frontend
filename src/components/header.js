@@ -44,7 +44,7 @@ function Header() {
     }
 
     return (
-        <ResponsiveBox singleColumnScreen="sm" screenByWidth={screen} className='header-bg-red'>
+        <ResponsiveBox singleColumnScreen="sm" screenByWidth={screen} className='header-bg'>
             <Row ratio={1}></Row>
 
             <Col ratio={1}></Col>
@@ -63,10 +63,10 @@ function Header() {
                     colspan={2}
                     screen="sm"
                 ></Location>
-                <div className="content item header-bg-red">
+                <div className="content item header-bg">
                     <div>
                         <TabPanel
-                            className='header-bg-red'
+                            className='header-bg'
                             dataSource={menuOptions}
                             selectedIndex={selectedIndex}
                             onOptionChanged={onSelectionChanged}
@@ -94,7 +94,7 @@ function Header() {
                         <img
                             src={logo}
                             alt="logo"
-                            style={{ width: '20px', height: '20px' }}
+                            style={{ width: '32px', height: '32px' }}
                         />
                     </div>
                 </div>

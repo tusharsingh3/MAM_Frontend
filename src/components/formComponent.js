@@ -5,7 +5,7 @@ import { getResponse } from '../common';
 import { enums } from '../common/enums';
 
 const FormComponent = ({ formModel }) => {
-    const { fields, caption } = formModel;
+    const { fields, title } = formModel;
 
     const [formData, setFormData] = useState(null);
     const formInstance = useRef(null);
@@ -75,7 +75,7 @@ const FormComponent = ({ formModel }) => {
 
     return (
         <Form formData={fields} onFieldDataChanged={handleChange} onInitialized={(e) => (formInstance.current = e.component)} className='form-component'>
-            <GroupItem caption={caption} cssClass='form'>
+            <GroupItem caption={title} cssClass='form'>
                 {fields.map((ele) => {
                     const { name, label, type, isRequired = false, isNumberField = false, isEmailField = false, isForConfirmPassword = false, isForPassword = false } = ele;
                     let { editorOptions = { width: 400 } } = ele;

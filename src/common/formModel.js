@@ -4,12 +4,7 @@ const nonAlphaNumeric = /[^a-zA-Z0-9]/g;
 
 class FormModel {
     constructor(formConfig) {
-        const { title } = formConfig;
-        let { api, idProperty = api + 'Id' } = formConfig;
-        if (!api) {
-            api = `${title.replaceAll(nonAlphaNumeric, '-').toLowerCase()}`;
-            idProperty = title.replaceAll(' ', '') + 'Id';
-        }
+        const { title, api = title.replace(nonAlphaNumeric, '-').toLowerCase(), idProperty = title.replace(' ', '') + 'Id' } = formConfig;
         Object.assign(this, { idProperty, ...formConfig, api });
     }
 
