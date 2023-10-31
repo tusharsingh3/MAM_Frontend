@@ -41,7 +41,6 @@ export const menuOptions = [
     { ID: 0, name: 'Home', icon: 'product', url: '/' },
     { ID: 1, name: 'Contact Us', icon: 'contact', url: '/contact' },
     { ID: 2, name: 'Login', icon: 'login', url: '/login', showAfterLogin: false },
-    { ID: 3, name: 'Register', icon: 'login', url: '/register', showAfterLogin: false },
     { ID: 4, name: 'Channels', icon: 'group', url: '/channels' },
     { ID: 5, name: 'Roles', icon: 'role', url: '/roles' }
 ];

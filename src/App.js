@@ -5,7 +5,6 @@ import ContactUs from './screens/Contact';
 import loginModel from './screens/Login';
 import channelModel from './screens/Channels';
 import Header from './components/header';
-import Register from './screens/Register';
 import rolesModel from './screens/Roles';
 import './App.css';
 
@@ -18,7 +17,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<loginModel.Form />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="/register" element={<Register />} />
           <Route path="/channels" element={<channelModel.Grid />} />
           <Route path="/roles" element={<rolesModel.Grid />} />
         </Routes>
