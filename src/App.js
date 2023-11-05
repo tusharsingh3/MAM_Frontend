@@ -1,28 +1,42 @@
+import 'devextreme/dist/css/dx.common.css';
+import './themes/generated/theme.base.css';
+import './themes/generated/theme.additional.css';
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Home from './screens/Home';
-import ContactUs from './screens/Contact';
-import loginModel from './screens/Login';
-import channelModel from './screens/Channels';
-import Header from './components/header';
-import rolesModel from './screens/Roles';
-import './App.css';
+import { HashRouter as Router } from 'react-router-dom';
+import './dx-styles.scss';
+import LoadPanel from 'devextreme-react/load-panel';
+import { NavigationProvider } from './contexts/navigation';
+import { AuthProvider, useAuth } from './contexts/auth';
+import { useScreenSizeClass } from './utils/media-query';
+import Content from './Content';
+import UnauthenticatedContent from './UnauthenticatedContent';
 
 function App() {
-  return (
-    <div>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<loginModel.Form />} />
-          <Route path="/contact" element={<ContactUs />} />
-          <Route path="/channels" element={<channelModel.Grid />} />
-          <Route path="/roles" element={<rolesModel.Grid />} />
-        </Routes>
-      </div>
-    </div>
-  );
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return <LoadPanel visible={true} />;
+  }
+
+  if (user) {
+    return <Content />;
+  }
+
+  return <UnauthenticatedContent />;
 }
 
-export default App;
+export default function Root() {
+  const screenSizeClass = useScreenSizeClass();
+
+  return (
+    <Router>
+      <AuthProvider>
+        <NavigationProvider>
+          <div className={`app ${screenSizeClass}`}>
+            <App />
+          </div>
+        </NavigationProvider>
+      </AuthProvider>
+    </Router>
+  );
+}
